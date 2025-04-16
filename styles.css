@@ -1,0 +1,82 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+}
+
+#loading-bar {
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    margin-top: 20px;
+    animation: load 3s infinite;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    50% { width: 100px; }
+    100% { width: 0; }
+}
+
+#home-screen {
+    display: none;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+}
+
+.x {
+    color: red;
+}
+
+.o {
+    color: white;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* End Screen */
+#game-end {
+    display: none;
+    margin-top: 20px;
+}
